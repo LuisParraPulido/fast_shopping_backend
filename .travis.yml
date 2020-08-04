@@ -8,14 +8,13 @@ node_js:
 git:
   depth: 3
 script:
-  - yarn front:build
+  - yarn build
 deploy:
-  provider: pages
+  provider: heroku
   skip-cleanup: true
   keep-history: true
-  github-token: $GITHUB_TOKEN
-  local-dir: dist/
-  target-brach: gh-pages
-  commit_message: "Deploy Project"
+  api_key:
+    secure: "TctITqv9tUyfrzDVxTpbCL94OWoiBm8Z/tHFA2f/quG1hfBUWbZUKEpENt9xNMmqcYVLZ3kn4WI9LS03krZGGvodG5H+vY4sm5Oh3dtVqjs+wIrQQIq7xodvIiOfvEKgxD/WaSJVBiPSO41pXtcV0h0eebHdoipfLr1pwmCmI6WHmSXXRWut+HuuDf9NKpHG2JoGUUUGgV1KSJNG2XVfRQexFT08XHqgfqq9QbDfoj+W+NjkV4BZmL5sJpxV7Ij/plYmEqJg+KkkGC+nQvCtAbmPm7d0gl+dey4E20Mn7uFexhM9L/qaPZq2zjAHvfRF1nyTBJwwaXbfohrvd562Te9RXEHxAh+JApVG+ERoEe/gXMvyn6QW8CqwiuKn5I1fSZRaHz4diNtoVpKXqYqYOg79lRW/hM6sTTyfwrbFdLE+CL7leqs4FCEWLkNifckW8rcqQebYRyIAtzZ5ZSLo/GD2w8NW2F5zeNyQG8agpEPaEkxBXVRYDzDuYKQ7jyrvccnHbycnO73d/VSD3EC45TW7A4BA57ERzFY8oC7dCwtcI3zi2su1kQDHUe7ivtI19oc1Q2nHU41ps/kyxB2s4SoLlYBctD8m0h+JKcBK+TX20RnCO4ZXFEW1pWKYqB2xq5rQCjd5IenVHMbE967MPSBWN7Y1Of3LYvi9i53oh+4="
+  app: fast_shopping
   on:
-    branch: master
+    repo: luisparrapulido/fast_shopping_backend
