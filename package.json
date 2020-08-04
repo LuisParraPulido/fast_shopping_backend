@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run build",
     "dev": "nodemon ./src/backend/index.js",
-    "build": "node ./src/backend/index.js"
+    "build": "node ./src/backend/index.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "Luis Alberto Parra Pulido",
   "license": "MIT",
